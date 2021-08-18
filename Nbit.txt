@@ -1,0 +1,29 @@
+/*
+Write a C program to get nth bit of a number
+*/
+
+#include <stdio.h>
+
+
+void NBit(int num,int bit){
+    int bitStatus;
+    bitStatus = (num >> bit) & 1;
+    printf("The %d bit is set to %d", num, bitStatus);
+    
+}
+int main()
+{
+    int j, n, bitStatus;
+
+    printf("Enter any number: ");
+    scanf("%d", &j);
+
+
+    printf("Enter nth bit to check (0-31): ");
+    scanf("%d", &n);
+    if (n<32)
+    NBit(j,n);
+    else
+    printf("Invalid Bit");
+    return 0;
+}
